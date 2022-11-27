@@ -17,3 +17,4 @@ Net-Salary Calculator code
 
 A program whose major task is to calculate an individual’s Net Salary by getting the inputs of basic salary and benefits.
 Calculates the payee (i.e. Tax), NHIFDeductions, NSSFDeductions, gross salary, and net salary
+# wk1-code-challenge
