@@ -1,0 +1,27 @@
+{
+  "name": "wk1-code-challenge",
+  "version": "1.0.0",
+  "description": "Kimathi Njoki Week one code challenge",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1", "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kimathinjoki/wk1-code-challenge.git"
+  },
+  "keywords": [
+    "grade",
+    "speed",
+    "detector",
+    "Net",
+    "salary",
+    "Calculator"
+  ],
+  "author": "KimathiNjoki",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kimathinjoki/wk1-code-challenge/issues"
+  },
+  "homepage": "https://github.com/kimathinjoki/wk1-code-challenge#readme"
+}
