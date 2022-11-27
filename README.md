@@ -1,4 +1,4 @@
-Week 1 code challenge.
+Week1 code challenge.
 
 Student Grade Generator
 Prompts the user to input student marks.
