@@ -1,8 +1,11 @@
 //Challenge 3: Net Salary Calculator (Toy Problem)
 //Write a program whose major task is to calculate an
 //individual’s Net Salary by getting the inputs of basic salary and benefits.
-//Calculate the payee (i.e. Tax), NHIFDeductions, NSSFDeductions, gross salary, and net salar
+//Calculate the payee (i.e. Tax), NHIFDeductions, NSSFDeductions, gross salary, and net salary
 
+const prompt = require("prompt-sync")();
+
+//calculates the NHIF contributions
 const nhifDedections = function (gross) {
     let nhifLevy = 0
     if (gross > 0 && gross <= 5999) {
@@ -28,7 +31,7 @@ const nhifDedections = function (gross) {
     } else if (gross >= 45000 && gross <= 49999) {
         return nhifLevy = 1100;
     } else if (gross >= 50000 && gross <= 59999) {
-        let nhifLevy = 1200;
+        return nhifLevy = 1200;
     } else if (gross >= 60000 && gross <= 69999) {
         return nhifLevy = 1300;
     } else if (gross >= 70000 && gross <= 79999) {
@@ -44,13 +47,11 @@ const nhifDedections = function (gross) {
     return nhifLevy
 }
 
-
+//Does the nssf deduction from your gross salary
 const nssfDeductions = function(gross) {
     let nssf = 0
-    if (gross > 0 && gross <= 4500){
-        return nssf = 270;
-    }else if (gross >= 6000 && gross <=17999){
-        return nssf = 840
+    if (gross > 0 && gross <= 17999){
+        return gross*0.06
     }else if (gross >= 18000){
         return nssf = 1080
     }
@@ -59,8 +60,13 @@ const nssfDeductions = function(gross) {
 
 }
 
-function salaryCalculator(basic, benefits) {
-    let gross = basic + benefits;
+
+ //the function takes the user's basic salary and their total benefits as parameters and calculates their paye.
+
+function salaryCalculator() {
+    let basic = prompt("What's your Basic Salary: ")
+    let benefits = prompt("What are your total benefits: ")
+    let gross = Number(basic) + Number(benefits);
     let payeAmount = 0;
     let taxableIncome = gross -(nhifDedections(gross) + nssfDeductions(gross))
     if (gross > 0 && gross <= 24000) {
@@ -70,7 +76,7 @@ function salaryCalculator(basic, benefits) {
     }else if (gross > 32333) {
         payeAmount = taxableIncome * 0.30
     }
-    return `Your gross salary is ${gross}/n Your payee is ${payeAmount}/n Your net salary is ${(gross - payeAmount)}/n Your nssf deductions were ${nssfDeductions(gross)}/n Your NHIF contribution were ${nhifDedections(gross)}`
+    return ` -Your gross salary is ${gross}\n -Your payee is ${payeAmount}\n -Your net salary is ${(gross - payeAmount)}\n -Your nssf deductions were ${nssfDeductions(gross)}\n -Your NHIF contribution were ${nhifDedections(gross)}`
 }
 
-salaryCalculator(459987,678900);
+console.log(salaryCalculator());

@@ -5,9 +5,12 @@
 //For example, if the speed is 80, it should print: “Points: 2”.
 //If the driver gets more than 12 points, the function should print: “License suspended”.
 
+const prompt = require("prompt-sync")();
 
 
-function speedDetector(speed){
+function speedDetector(){
+    let speed = prompt('Please enter speed in Km: ')
+
     if(speed > 0 && speed <=70){
         return "Ok"
     }else if(speed>70){
@@ -22,4 +25,4 @@ function speedDetector(speed){
     }
 }
 
-speedDetector(75)
+console.log(speedDetector())

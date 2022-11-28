@@ -4,7 +4,8 @@
   "description": "Kimathi Njoki Week one code challenge",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1", "start": "node index.js"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node"
   },
   "repository": {
     "type": "git",
@@ -23,5 +24,8 @@
   "bugs": {
     "url": "https://github.com/kimathinjoki/wk1-code-challenge/issues"
   },
-  "homepage": "https://github.com/kimathinjoki/wk1-code-challenge#readme"
+  "homepage": "https://github.com/kimathinjoki/wk1-code-challenge#readme",
+  "dependencies": {
+    "prompt-sync": "^4.2.0"
+  }
 }

@@ -4,7 +4,12 @@
 //The input should be between 0 and 100. Then output the correct grade:
 //A > 79, B - 60 to 79, C -  59 to 49, D - 40 to 49, E - less 40
 
-function studentGradeGenerator(grade){
+
+const prompt = require("prompt-sync")();
+
+
+function studentGradeGenerator(){
+    let grade = Number(prompt("Please enter the grade: "))
     if(grade > 79 && grade <= 100){
         return "You got an A"
     }else if(grade <=79 && grade >=60){
@@ -20,4 +25,4 @@ function studentGradeGenerator(grade){
     }
 }
 
-studentGradeGenerator(78)
+console.log(studentGradeGenerator());
