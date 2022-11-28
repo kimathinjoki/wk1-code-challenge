@@ -69,11 +69,11 @@ function salaryCalculator() {
     let gross = Number(basic) + Number(benefits);
     let payeAmount = 0;
     let taxableIncome = gross -(nhifDedections(gross) + nssfDeductions(gross))
-    if (gross > 0 && gross <= 24000) {
+    if (taxableIncome > 0 && taxableIncome <= 24000) {
         payeAmount = taxableIncome * 0.1
     }else if (taxableIncome >= 24001 && taxableIncome <= 32333) {
         payeAmount = ((taxableIncome-24000) * 0.25)+ 2400
-    }else if (gross > 32333) {
+    }else if (taxableIncome > 32333) {
         payeAmount = ((taxableIncome-32333)* 0.30)+ 2400 + 2083.25
     }
     return ` -Your gross salary is: ${gross}\n -Your payee is: ${payeAmount}\n -Your net salary is: ${(gross - payeAmount)}\n -Your nssf deductions were: ${nssfDeductions(gross)}\n -Your NHIF contribution were: ${nhifDedections(gross)}`
