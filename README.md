@@ -37,5 +37,5 @@ This project was contributed to by:
 [KimathiNjoki]https://github.com/kimathinjoki/
 
 # License
-The project is licensed under ISL
+The project is licensed under ISC
 
