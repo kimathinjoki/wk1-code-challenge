@@ -76,7 +76,7 @@ function salaryCalculator() {
     }else if (gross > 32333) {
         payeAmount = ((taxableIncome-32333)* 0.30)+ 2400 + 2083.25
     }
-    return ` -Your gross salary is ${gross}\n -Your payee is ${payeAmount}\n -Your net salary is ${(gross - payeAmount)}\n -Your nssf deductions were ${nssfDeductions(gross)}\n -Your NHIF contribution were ${nhifDedections(gross)}`
+    return ` -Your gross salary is: ${gross}\n -Your payee is: ${payeAmount}\n -Your net salary is: ${(gross - payeAmount)}\n -Your nssf deductions were: ${nssfDeductions(gross)}\n -Your NHIF contribution were: ${nhifDedections(gross)}`
 }
 
 console.log(salaryCalculator());
