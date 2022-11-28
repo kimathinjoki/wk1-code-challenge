@@ -26,7 +26,7 @@ Calculates the payee (i.e. Tax), NHIFDeductions, NSSFDeductions, gross salary, a
 The program takes in twp parameter: the basic salary and their total benefits.
 
 # PROJECT SETUP
- The netsalaryCalculator.js when run  using node asks for your basic salary and your total benefits and returns your Gross Salary, Net salary, PAYE and NHIF and NSSF contributions
+ The netsalaryCalculator.js when run  using node asks for your basic salary and your total benefits and returns your Gross Salary, Net salary, PAYE, NHIF deduction with the the tax relief included and NSSF contributions
 
  The Speed-detector.js asks for a speed input and when called in the terminal using node it ouputs whether the speed is fine and for every 5km past 70 it returns pointspoints.
 

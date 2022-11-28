@@ -9,39 +9,39 @@ const prompt = require("prompt-sync")();
 const nhifDedections = function (gross) {
     let nhifLevy = 0
     if (gross > 0 && gross <= 5999) {
-        return nhifLevy = 150;
+        return nhifLevy = 150*0.85;
     } else if (gross >= 6000 && gross <= 7999) {
-        return nhifLevy = 300;
+        return nhifLevy = 300*0.85;
     } else if (gross >= 8000 && gross <= 11999) {
-        return nhifLevy = 400;
+        return nhifLevy = 400*0.85;
     } else if (gross >= 12000 && gross <= 14999) {
-        return nhifLevy = 500;
+        return nhifLevy = 500*0.85;
     } else if (gross >= 15000 && gross <= 19999) {
-        return nhifLevy = 600;
+        return nhifLevy = 600*0.85;
     } else if (gross >= 20000 && gross <= 24999) {
-        return nhifLevy = 750;
+        return nhifLevy = 750*0.85;
     } else if (gross >= 25000 && gross <= 29999) {
-        return nhifLevy = 850;
+        return nhifLevy = 850*0.85;
     } else if (gross >= 30000 && gross <= 34999) {
-        return nhifLevy = 900;
+        return nhifLevy = 900*0.85;
     } else if (gross >= 35000 && gross <= 39999) {
-        return nhifLevy = 950;
+        return nhifLevy = 950*0.85;
     } else if (gross >= 40000 && gross <= 44999) {
-        return nhifLevy = 1000;
+        return nhifLevy = 1000*0.85;
     } else if (gross >= 45000 && gross <= 49999) {
-        return nhifLevy = 1100;
+        return nhifLevy = 1100*0.85;
     } else if (gross >= 50000 && gross <= 59999) {
-        return nhifLevy = 1200;
+        return nhifLevy = 1200*0.85;
     } else if (gross >= 60000 && gross <= 69999) {
-        return nhifLevy = 1300;
+        return nhifLevy = 1300*0.85;
     } else if (gross >= 70000 && gross <= 79999) {
-        return nhifLevy = 1400
+        return nhifLevy = 1400*0.85
     } else if (gross >= 80000 && gross <= 89999) {
-        return nhifLevy = 1500
+        return nhifLevy = 1500*0.85
     } else if (gross >= 90000 && gross <= 99999) {
-        return nhifLevy = 1600
+        return nhifLevy = 1600*0.85
     } else if (gross >= 100000) {
-        return nhifLevy = 1700
+        return nhifLevy = 1700*0.85
     }
 
     return nhifLevy
@@ -72,9 +72,9 @@ function salaryCalculator() {
     if (gross > 0 && gross <= 24000) {
         payeAmount = taxableIncome * 0.1
     }else if (taxableIncome >= 24001 && taxableIncome <= 32333) {
-        payeAmount = taxableIncome * 0.25
+        payeAmount = ((taxableIncome-24000) * 0.25)+ 2400
     }else if (gross > 32333) {
-        payeAmount = taxableIncome * 0.30
+        payeAmount = ((taxableIncome-32333)* 0.30)+ 2400 + 2083.25
     }
     return ` -Your gross salary is ${gross}\n -Your payee is ${payeAmount}\n -Your net salary is ${(gross - payeAmount)}\n -Your nssf deductions were ${nssfDeductions(gross)}\n -Your NHIF contribution were ${nhifDedections(gross)}`
 }
