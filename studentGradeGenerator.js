@@ -9,7 +9,7 @@ const prompt = require("prompt-sync")();
 
 
 function studentGradeGenerator(){
-    let grade = Number(prompt("Please enter the grade: "))
+    let grade = Number(prompt("Please enter the score: "))
     if(grade > 79 && grade <= 100){
         return "You got an A"
     }else if(grade <=79 && grade >=60){
