@@ -18,7 +18,7 @@ function speedDetector(){
         if (exceedSpeed > 12){
             return "License suspended"
         }else{
-            return `Points: ${exceedSpeed}`
+            return `Points: ${Math.ceil(exceedSpeed)}`
         }
     }else{
         return "Please enter correct speed"
