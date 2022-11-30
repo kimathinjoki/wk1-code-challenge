@@ -25,16 +25,20 @@ A program whose major task is to calculate an individual’s Net Salary by getti
 Calculates the payee (i.e. Tax), NHIFDeductions, NSSFDeductions, gross salary, and net salary
 The program takes in twp parameter: the basic salary and their total benefits.
 
-## Installation
+# Installation
 Git clone the repo to your local machine from:
 
 https://github.com/kimathinjoki/wk1-code-challenge
 
+Open Visual Studios from the cloned directory or your preffered editor.
+
+Open a new terminal and npm install
+
 
 # Project setup/running
-Running the various files in the project requires node installed in your running enviroment.
+Running the various files in the project requires node installed in your running environment.
 
- The netsalaryCalculator.js file is run by passing 'node netsalaryCalculator.js' in the VS terminal
+ The netsalaryCalculator.js file is run by passing 'node netsalaryCalculator.js' in the VS terminal.
  It asks for your basic salary and your total benefits and returns your Gross Salary, Net salary, PAYE, NHIF deduction with the the tax relief included and NSSF contributions as the output
 
  The speed-detector.js file runs by passing 'node speed-detector.js' in the VS terminal.
