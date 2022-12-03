@@ -1,0 +1,25 @@
+{
+  "name": "wk2-code-challenge",
+  "version": "1.0.0",
+  "description": "Flataculties app to vote for cute animals",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kimathinjoki/wk2-Code-Challenge.git"
+  },
+  "keywords": [
+    "Flataculties",
+    "vote",
+    "animal",
+    "server"
+  ],
+  "author": "Kimathi Njoki",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kimathinjoki/wk2-Code-Challenge/issues"
+  },
+  "homepage": "https://github.com/kimathinjoki/wk2-Code-Challenge#readme"
+}
